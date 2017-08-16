@@ -1,4 +1,54 @@
 div.robot{
   border: 1px solid gray;
-  border-radius: 1px;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 5px;
+  /*align-items: center;*/
+  /*align-content: center;*/
+}
+
+ul.list-of-robots{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+div.robot-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-row img{
+  width: 200px;
+  height: 200px;
+  border: 1px solid gray;
+  border-radius: 100px;
+  margin: 10px;
+}
+
+.right-of-pic h1{
+  font-size: 40px;
+}
+
+div.top-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.right-of-pic{
+  align-items: center;
+}
+
+div.bottom-row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.bottom-row li{
+  list-style: none;
 }

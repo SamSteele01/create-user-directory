@@ -4,19 +4,13 @@ const path = require('path');
 const port = 3000;
 const mustache = require('mustache-express');
 const dataFile = require('./data.js');
-//
-// app.get('/', function(req, res){
-//   res.send('Hello world!');
-// });
+
 app.engine('mustache', mustache());
 app.set('views', './views');
 app.set('view engine', 'mustache');
 
-app.use('/create-user-dir', express.static('create-user-dir'));
+app.use(express.static(__dirname+'/public'));
 
-// app.get('/data.js', function(req, res){
-//   res.sendFile(path.join(__dirname+'/index.html'));
-// })
 app.get('/index', function(req, res){
     res.render('index', dataFile);
 });

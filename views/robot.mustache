@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mustache Activity</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
 
   </head>
   <body>
@@ -14,24 +13,40 @@
     <div class="container">
 
           <ul class="robot-info">
+            <div class="top-row">
+              <img src="{{avatar}}" alt="">
+              <div class="right-of-pic">
 
-            <img src="{{avatar}}" alt="">
-
-            <h1>{{name}}</h1>
-            <p>{{city}},{{country}}|{{job}},{{company}}</p>
-            <p>{{email}}|{{phone}}</p>
-
-            <p>Education</p>
-            <p>Skills</p>
-
-            {{university}}
-            {{skills}}
+              <h1>{{name}}</h1>
+              {{#address.city}}
+                <p>{{address.city}},
+              {{/address.city}}
+              {{#address.country}}
+                {{address.country}}
+              {{/address.country}}
+               |
+              {{#job}}
+                {{job}}, {{company}}
+              {{/job}}
+              {{^job}}
+                Available for hire</p>
+              {{/job}}
+              <p>{{email}} | {{phone}}</p>
+              </div>
+            </div>
+            <div class="bottom-row">
+              {{#university}}
+                <p>Education {{university}}</p>
+              {{/university}}
+                <p>Skills
+              {{#skills}}
+                <li>{{.}}</li></p>
+              {{/skills}}
+            </div>
 
           </ul>
 
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>
