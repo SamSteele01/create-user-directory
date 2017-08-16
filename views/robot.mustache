@@ -34,15 +34,20 @@
               <p>{{email}} | {{phone}}</p>
               </div>
             </div>
-            <div class="bottom-row">
-              {{#university}}
-                <p>Education {{university}}</p>
-              {{/university}}
-                <p>Skills
-              {{#skills}}
-                <li>{{.}}</li></p>
-              {{/skills}}
-            </div>
+            <table class="bottom-row">
+              <tr class="">
+                {{#university}}
+                  <td>Education </td>
+                  <td>{{university}}</td>
+                {{/university}}
+              </tr>
+              <tr class="">
+                <td>Skills </td>
+                {{#skills}}
+                  <td><li>{{.}}</li></td>
+                {{/skills}}
+              </tr>
+            </table>
 
           </ul>
 

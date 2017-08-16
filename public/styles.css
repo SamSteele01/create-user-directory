@@ -30,6 +30,7 @@ div.robot-info{
 
 .right-of-pic h1{
   font-size: 40px;
+
 }
 
 div.top-row{
@@ -40,14 +41,23 @@ div.top-row{
 
 div.right-of-pic{
   align-items: center;
+  padding: 20px;
 }
 
 div.bottom-row{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-content: center;
+  /*align-content: center;*/
 }
+
+/*div.bottom-left{
+  display: block;
+}
+
+div.bottom-right{
+  display: block;
+}*/
 
 .bottom-row li{
   list-style: none;
