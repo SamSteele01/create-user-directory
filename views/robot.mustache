@@ -12,8 +12,8 @@
 
     <div class="container">
 
-          <ul class="robot-info">
-            <div class="top-row">
+        <ul class="robot-info">
+          <div class="top-row">
               <img src="{{avatar}}" alt="">
               <div class="right-of-pic">
 
@@ -29,27 +29,28 @@
                 {{job}}, {{company}}
               {{/job}}
               {{^job}}
-                Available for hire</p>
+                <span>Available for hire</span></p>
               {{/job}}
               <p>{{email}} | {{phone}}</p>
               </div>
-            </div>
-            <table class="bottom-row">
-              <tr class="">
+          </div>
+          <div class="bottom-row">
+              <table>
+              <tr class="upper">
                 {{#university}}
-                  <td>Education </td>
+                  <td class="bold">Education </td>
                   <td>{{university}}</td>
                 {{/university}}
               </tr>
               <tr class="">
-                <td>Skills </td>
-                {{#skills}}
-                  <td><li>{{.}}</li></td>
-                {{/skills}}
+                <td class="bold">Skills </td>
+                <td>{{#skills}}
+                  <li>{{.}}</li>
+                {{/skills}}</td>
               </tr>
             </table>
-
-          </ul>
+          </div>
+        </ul>
 
     </div>
 
